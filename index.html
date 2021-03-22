@@ -53,6 +53,15 @@
       
       circle.bindPopup("I am a circle.");
       
+      var circle2 = L.circle([39.0841938,-77.2127823], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 500
+      }).addTo(mymap);
+      
+      circle2.bindPopup("I am a circle.");
+      
       function onMapHover(e) {
         var newLatLng = String(e.latlng).replace("LatLng(", "").replace(")", "")
         document.getElementById("latLon").innerHTML = newLatLng;
