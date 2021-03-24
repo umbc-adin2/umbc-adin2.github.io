@@ -20,14 +20,19 @@
       padding: 0 10px;
       
       
+    /* Your CSS goes below this line*/
+
+    p {
+        color: "blue";
+    }
     }
   </style>
 </head>
 <html>
   <body>
 
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
+    <h1>Hello World</h1>
+    <p>I really like this map</p>
     <br>
     <div id="mapid"></div>
     <div id="latLon">39.0941938,-77.2027823</div>
@@ -45,22 +50,25 @@
 }).addTo(mymap);
       
       var circle = L.circle([39.0941938,-77.2027823], {
-        color: 'blue',
+        color: 'purple',
         fillColor: '#f03',
         fillOpacity: 0.5,
         radius: 500
       }).addTo(mymap);
       
-      circle.bindPopup("I am a circle.");
-      
-      var circle2 = L.circle([39.0841938,-77.2127823], {
-        color: 'red',
+      circle.bindPopup("I am not a circle (this is a lie).");
+
+
+      var circle2 = L.circle([40.0941938,-78.2027823], {
+        color: 'green',
         fillColor: '#f03',
         fillOpacity: 0.5,
         radius: 500
       }).addTo(mymap);
       
-      circle2.bindPopup("I am a circle.");
+      circle2.bindPopup("I am also circle.");
+      
+      raw = LatLng(38.12346, -77.987654)
       
       function onMapHover(e) {
         var newLatLng = String(e.latlng).replace("LatLng(", "").replace(")", "")
